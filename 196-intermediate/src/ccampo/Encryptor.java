@@ -6,7 +6,7 @@ package ccampo;
 public class Encryptor {
 
     public String encrypt(final int numRails, final String message) {
-        StringBuilder[] rails = new StringBuilder[numRails];
+        final StringBuilder[] rails = new StringBuilder[numRails];
         for (int i = 0; i < numRails; ++i) {
             rails[i] = new StringBuilder();
         }
