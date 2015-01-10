@@ -5,7 +5,7 @@ package ccampo;
  */
 public class Decryptor {
 
-    public String decrypt(final int rails, final String message) {
+    public String decrypt(final int numRails, final String message) {
         return null;
     }
 }

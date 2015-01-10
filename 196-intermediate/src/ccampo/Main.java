@@ -8,9 +8,9 @@ public class Main {
         final String message = args[2];
 
         String result = "";
-        if (message.equals("enc")) {
-            result = new Encryptor().encrpyt(rails, message);
-        } else if (message.equals("dec")) {
+        if (method.equals("enc")) {
+            result = new Encryptor().encrypt(rails, message);
+        } else if (method.equals("dec")) {
             result = new Decryptor().decrypt(rails, message);
         }
 
