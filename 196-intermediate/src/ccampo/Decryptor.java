@@ -1,7 +1,5 @@
 package ccampo;
 
-import java.util.Queue;
-
 /**
  * @author Chris Campo
  */
