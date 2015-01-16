@@ -3,9 +3,6 @@ package ccampo;
 import java.time.Duration;
 import java.time.LocalTime;
 
-/**
- * @author Chris Campo
- */
 public class TravelTimes {
 
     private final Duration morningTravelTime;
@@ -33,7 +30,7 @@ public class TravelTimes {
         }
     }
 
-    private boolean isWithinInterval(LocalTime start, LocalTime end, LocalTime time) {
+    private boolean isWithinInterval(final LocalTime start, final LocalTime end, final LocalTime time) {
         if (start.isAfter(end)) {
             // Return true if the time is after (or at) start, *or* it's before end
             return time.compareTo(start) >= 0 ||

@@ -1,10 +1,10 @@
 package ccampo.graph;
 
-public class Node {
+public class Intersection {
 
     private final String name;
 
-    public Node(final String name) {
+    public Intersection(final String name) {
         this.name = name;
     }
 
@@ -16,15 +16,22 @@ public class Node {
     public boolean equals(final Object o) {
         if (this == o)
             return true;
-        if (!(o instanceof Node))
+        if (!(o instanceof Intersection))
             return false;
 
-        final Node node = (Node) o;
-        return name.equals(node.name);
+        final Intersection intersection = (Intersection) o;
+        return name.equals(intersection.name);
     }
 
     @Override
     public int hashCode() {
         return name.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Intersection{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
