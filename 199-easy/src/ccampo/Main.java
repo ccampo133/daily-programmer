@@ -65,10 +65,9 @@ public class Main {
         final StringBuilder s = new StringBuilder();
         for (final String line : lines) {
             for (int row = 0; row < 3; ++row) {
-                for (final char numChar : line.toCharArray()) {
-                    final int num = Character.getNumericValue(numChar);
+                for (final char num : line.toCharArray()) {
                     for (int col = 0; col < 3; ++col) {
-                        s.append(numbers[num][row][col]);
+                        s.append(numbers[Character.getNumericValue(num)][row][col]);
                     }
                 }
                 s.append("\n");
