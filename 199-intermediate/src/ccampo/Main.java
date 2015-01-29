@@ -62,15 +62,18 @@ public class Main {
                 }
         };
 
+        final int numbersPerLine = 9;
+        final int numberWidth = 3;
+        final int numberHeight = 3;
+        final char[][][] numbers = new char[numbersPerLine][numberWidth][numberHeight];
         final List<String> lines = Files.readAllLines(Paths.get(args[0]));
-        final char[][][] numbers = new char[9][3][3];
 
         int row = 0;
         final StringBuilder s = new StringBuilder();
         for (final String line : lines) {
-            for (int i = 0; i < 9; ++i) {
-                for (int j = 0; j < 3; ++j) {
-                    final int index = (3 * i) + j;
+            for (int i = 0; i < numbersPerLine; ++i) {
+                for (int j = 0; j < numberWidth; ++j) {
+                    final int index = (numberWidth * i) + j;
                     final char c = line.charAt(index);
                     numbers[i][row][j] = c;
                 }
@@ -78,7 +81,7 @@ public class Main {
 
             ++row;
             if (row % 3 == 0) {
-                for (int i = 0; i < 9; ++i) {
+                for (int i = 0; i < numbersPerLine; ++i) {
                     for (int j = 0; j < numberChars.length; ++j) {
                         if (Arrays.deepEquals(numbers[i], numberChars[j])) {
                             s.append(j);
