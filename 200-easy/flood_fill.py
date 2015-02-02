@@ -55,4 +55,4 @@ elif sys.argv[1] == "-i":
 else:
     exit(1)
 
-print("\n".join(''.join(*zip(*row)) for row in grid))
+print("\n".join("".join(*zip(*row)) for row in grid))
