@@ -26,7 +26,7 @@ def check(row, col, cur_char, func):
     elif row - 1 == 0 and grid[h - 1][col] == cur_char:
         func(h - 1, col)
 
-    if row + 1 < w and grid[row + 1][col] == cur_char:
+    if row + 1 < h and grid[row + 1][col] == cur_char:
         func(row + 1, col)
     elif row + 1 == h and grid[0][col] == cur_char:
         func(0, col)
@@ -36,9 +36,9 @@ def check(row, col, cur_char, func):
     elif col - 1 == 0 and grid[row][w - 1] == cur_char:
         func(row, w - 1)
 
-    if col + 1 < h and grid[row][col + 1] == cur_char:
+    if col + 1 < w and grid[row][col + 1] == cur_char:
         func(row, col + 1)
-    elif col + 1 == h and grid[row][0] == cur_char:
+    elif col + 1 == w and grid[row][0] == cur_char:
         func(row, 0)
 
 
