@@ -1,11 +1,11 @@
 package ccampo133
 
 class PriorityQueue[T] {
-  var items = Seq.empty[(T, Int, Int)]
+  var items = Seq.empty[(T, Double, Double)]
 
   def count: Int = items.length
-  def clear(): Unit = items = Seq.empty[(T, Int, Int)]
-  def enqueue(item: T, priA: Int, priB: Int): Unit = items :+=(item, priA, priB)
+  def clear(): Unit = items = Seq.empty[(T, Double, Double)]
+  def enqueue(item: T, priA: Double, priB: Double): Unit = items :+=(item, priA, priB)
 
   def dequeueA: T = {
     // Reversing the sign sorts in descending order
