@@ -15,4 +15,15 @@ object Rovarspraket extends App {
     if (isConsonant(s(0))) s(0) + decode(s.drop(3))
     else s(0) + decode(s.tail)
   }
+
+  def decodeTail(s: String): String = {
+    @annotation.tailrec
+    def decodeTail(s: String, acc: String): String = {
+      if (s.length == 0) return acc
+      if (isConsonant(s(0))) decodeTail(s.drop(3), acc + s(0))
+      else decodeTail(s.tail, acc + s(0))
+    }
+    decodeTail(s, "")
+  }
+
 }
